@@ -5,7 +5,7 @@ public enum TrafficLight {
     YELLOW(3),
     GREEN(25);
 
-    final int seconds;
+    private final int seconds;
 
     // Constructor
     TrafficLight(int seconds) {
