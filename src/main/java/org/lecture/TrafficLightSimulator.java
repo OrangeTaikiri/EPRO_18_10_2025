@@ -16,7 +16,7 @@ public class TrafficLightSimulator {
     }
 
     private static void evalTrafficLight(TrafficLight light) {
-        System.out.printf("%s light. Go for %d seconds %n", light.name(), light.getSeconds());
+        System.out.printf("%s light. Go for %d seconds %n", light.capitalize(), light.getSeconds());
     }
 
 }
