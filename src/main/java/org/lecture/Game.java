@@ -1,6 +1,5 @@
 package org.lecture;
 
-import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
@@ -13,6 +12,7 @@ public class Game {
         // Player 1 vs. Player 2
         System.out.println( evaluateMove(player1, player2, "Player 2"));
 
+        // a random number will pick one of three hands
         Move computer = switch (ThreadLocalRandom.current().nextInt(1, 4)) {
             case 1 -> Move.ROCK;
             case 2 -> Move.PAPER;
@@ -23,7 +23,6 @@ public class Game {
 
         // Player 1 vs. Computer
         System.out.println(evaluateMove(player1, computer, "Computer"));
-
 
     }
 
