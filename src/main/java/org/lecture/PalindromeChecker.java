@@ -1,5 +1,7 @@
 package org.lecture;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class PalindromeChecker {
 
     static void main() {

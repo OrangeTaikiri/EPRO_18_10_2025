@@ -1,18 +1,26 @@
 package org.lecture;
 
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
 
     static void main() {
-
-        Scanner scanner = new Scanner(System.in);
 
         Move player1 = Move.SCISSORS;
         Move player2 = Move.PAPER;
 
         System.out.println( evaluateMove(player1, player2));
 
+        Move computer = switch (ThreadLocalRandom.current().nextInt(1, 4)) {
+            case 1 -> Move.ROCK;
+            case 2 -> Move.PAPER;
+            case 3 -> Move.SCISSORS;
+            default ->
+                    throw new IllegalStateException("Unexpected value: " + ThreadLocalRandom.current().nextInt(1, 4));
+        };
+
+        System.out.println("computer = " + evaluateMove(player1, computer));
 
 
     }
