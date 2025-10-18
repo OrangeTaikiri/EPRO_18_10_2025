@@ -5,8 +5,18 @@ public class TrafficLightSimulator {
     static void main() {
 
         TrafficLight light = TrafficLight.GREEN;
-        System.out.printf("%s light. Go for %d seconds", light.name(), light.getSeconds());
+        evalTrafficLight(light);
 
+        light = TrafficLight.YELLOW;
+        evalTrafficLight(light);
+
+        light = TrafficLight.RED;
+        evalTrafficLight(light);
+
+    }
+
+    private static void evalTrafficLight(TrafficLight light) {
+        System.out.printf("%s light. Go for %d seconds %n", light.name(), light.getSeconds());
     }
 
 }
